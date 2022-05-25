@@ -18,10 +18,18 @@
 # include <limits.h>
 # include <stdarg.h>
 
-int ft_printf(const char *str, ...);
-int ft_p_char(char c);
-int ft_p_str(char *str);
-void ft_p_pointer(unsigned long long int num);
+int     ft_printf(const char *str, ...);
+int     ft_p_char(char c);
+int     ft_p_str(char *str);
+void    ft_p_pointer(unsigned long long int num);
 void    ft_p_num(int num);
+void    ft_putnbr_base(unsigned int nbr, char *base);
+int     ft_len_pointer(unsigned long long int num);
+int     ft_lenuns(unsigned int num);
+int     ft_len_hexa(unsigned int num);
+int     ft_strlen(char *str);
+int     ft_lennum(int num);
+
+
 
 #endif

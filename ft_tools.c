@@ -12,18 +12,6 @@
 
 #include "ft_printf.h"
 
-int ft_strlen(char *str)
-{
-    int len;
-
-    len = 0;
-    while (str[len])
-    {
-        len++;
-    }
-    return (len);
-}
-
 int ft_p_char(char c)
 {
     c = (unsigned char)c;
@@ -36,6 +24,11 @@ int ft_p_str(char *str)
     int i;
 
     i = 0;
+    if (!str)
+    {
+        write(1, "(null)", 6);
+        return (6);
+    }
     while (str[i])
     {
         write(1, &str[i], 1);
@@ -77,6 +70,7 @@ void    ft_p_num(int num)
         ft_p_char(nbr + '0');
     
 }
+
 /*
 int  main()
 {
